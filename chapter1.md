@@ -10,3 +10,7 @@ Para recuperar o token bearer deve-se autenticar passando usuário e senha por u
 [http://integra02.connectparts.com.br:8032/OAuth/Token?username=teste&password=teste](http://integra02.connectparts.com.br:8032/OAuth/Token?username=teste&password=teste)
 
 A resposta para essa execução é o seguinte json, nele é possível notar o acess_token, e com ele você pode fazer as requisições em nossas API’s.
+
+![autenticacao](http://developers.connectparts.com.br/imagens/drop2dev/img01.png)
+
+
