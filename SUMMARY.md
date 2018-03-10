@@ -1,5 +1,6 @@
 # Summary
 
 * [Introducao](README.md)
-* [First Chapter](chapter1.md)
+* [Autenticacao](chapter1.md)
+* [Estoque](estoque.md)
 
