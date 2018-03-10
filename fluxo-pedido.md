@@ -96,3 +96,19 @@ Agora a empresa fornecedora é responsável por emitir uma nota fiscal de remess
   "DataEmissao": "string"
 }
 ```
+
+Assim que a mercadoria for despachada, deve ser acionada a API com um POST
+
+[http://integra02.connectparts.com.br:8032/dropshipping/NotafiscalRemessa/NotificarDespacho](http://integra02.connectparts.com.br:8032/dropshipping/NotafiscalRemessa/NotificarDespacho)
+
+**Com um objeto **
+
+
+```
+{
+  "PedidoCodigo": "string",
+  "DataDespacho": "2018-03-10T12:16:45.224Z"
+}
+```
+
+
