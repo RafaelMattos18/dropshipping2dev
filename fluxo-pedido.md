@@ -68,7 +68,7 @@ Com o **JSon**:
 > Todos os valores praticados pelo ERP da Connect Parts são em inteiro, nesse caso o Json de vocês os números decimais no caso Valor, Quantidade e PrecoUnitario devem ser multiplicados por 100 e então ter seus zeros após a virgula removidos, por exemplo Quantidade = 1,00 * 100 => Quantidade = 100,00 e então devem ser removidos os 00 após a virgula, tornando em 100, um número inteiro.
 
 
-Com essas informações a ConnectParts consegue emitir a nota de venda para o cliente e então nós comunicaremos o faturamento para a API de vocês que deve ser criada para receber um objeto assim: 
+Com essas informações e com a **API de Download XML/DANFE** a ConnectParts consegue emitir a nota de venda para o cliente e então nós comunicaremos o faturamento para a API de vocês que deve ser criada para receber um objeto assim: 
 
 ```
 string NumeroNotaFiscal
