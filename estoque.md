@@ -2,7 +2,7 @@
 
 O segundo passo é alimentar o estoque. O endereço para isso é:
 
-http://integra02.connectparts.com.br:8032/dropshipping/Estoque/Atualizar
+[http://integra02.connectparts.com.br:8032/dropshipping/Estoque/Atualizar](http://integra02.connectparts.com.br:8032/dropshipping/Estoque/Atualizar)
 
 Nesse endereço deve ser fazer um POST com o seguinte json:
 
@@ -17,10 +17,14 @@ Nesse endereço deve ser fazer um POST com o seguinte json:
 ```
 
 ### Pontos importantes
+
 > 1. Apenas um dos campos entre **CodigoFabricao** ou **CodigoProduto** deve ser preenchido. Caso você opte por utilizar o CodigoFabricacao esse é o código do produto no ERP do fornecedor, o outro, CodigoProduto se refere ao código da connectparts.
 >
->2. O **FornecedorCodigo** é um Guid único que se refere ao fornecedor, para recupera-lo basta realizar um GET na API: http://integra02.connectparts.com.br:8032/dropshipping/Fornecedor/Listar
+> 2. O **FornecedorCodigo** é um Guid único que se refere ao fornecedor, para recupera-lo basta realizar um GET na API: [http://integra02.connectparts.com.br:8032/dropshipping/Fornecedor/Listar](http://integra02.connectparts.com.br:8032/dropshipping/Fornecedor/Listar)
 >
->3. O **SaldoDisponivel** é a quantidade de estoque do produto.
+> 3. O **SaldoDisponivel** é a quantidade de estoque do produto.
 >
->4. A frequência dessa alimentação vai variar de fornecedor para fornecedor.
+> 4. A frequência dessa alimentação vai variar de fornecedor para fornecedor.
+
+
+

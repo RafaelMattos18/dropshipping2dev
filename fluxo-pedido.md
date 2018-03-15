@@ -1,10 +1,8 @@
 # Fluxo Pedido
 
-O próximo passo é se preparar para receber um novo pedido de a ConnectParts, para isso deve ser criada uma API para receber um novo pedido. 
+O próximo passo é se preparar para receber um novo pedido de a ConnectParts, para isso deve ser criada uma API para receber um novo pedido.
 
 Segue abaixo objeto que será enviado pela ConnectParts:
-
-
 
 ```
 string NomeComprador  //Nome do cliente
@@ -37,15 +35,14 @@ Lista ItensCompra
              string CodigoProduto 
              int Quantidade     
              decimal TotalDoProduto 
-             decimal ValorUnitario 
-
+             decimal ValorUnitario
 ```
 
-Após a emissão da nota de compra (**_para connect_**) /de venda (**_para o fornecedor_**) pelo ERP deve ser comunicado esse faturamento para a nossa API 
+Após a emissão da nota de compra \(_**para connect**_\) /de venda \(_**para o fornecedor**_\) pelo ERP deve ser comunicado esse faturamento para a nossa API
 
-http://integra02.connectparts.com.br:8032/dropshipping/PedidoCompra/Inserir
+[http://integra02.connectparts.com.br:8032/dropshipping/PedidoCompra/Inserir](http://integra02.connectparts.com.br:8032/dropshipping/PedidoCompra/Inserir)
 
-Com o **JSon**: 
+Com o **JSon**:
 
 ```
 {
@@ -61,22 +58,22 @@ Com o **JSon**:
     }
   ]
 }
-
 ```
 
 **Observação importante:**
-> Todos os valores praticados pelo ERP da Connect Parts são em inteiro, nesse caso o Json de vocês os números decimais no caso Valor, Quantidade e PrecoUnitario devem ser multiplicados por 100 e então ter seus zeros após a virgula removidos, por exemplo:
-> Quantidade = 1,00 * 100 => Quantidade = 100,00 
+
+> Todos os valores praticados pelo ERP da Connect Parts são em inteiro, nesse caso o Json de vocês os números decimais no caso Valor, Quantidade e PrecoUnitario devem ser multiplicados por 100 e então ter seus zeros após a virgula removidos, por exemplo:  
+> Quantidade = 1,00 \* 100 =&gt; Quantidade = 100,00   
 > Então devem ser removidos os 00 após a virgula, tornando em 100, um número inteiro.
 
-Com essas informações e com a **API de Download XML/DANFE** a ConnectParts consegue emitir a nota de venda para o cliente e então nós comunicaremos o faturamento para a API de vocês que deve ser criada para receber um objeto assim: 
+Com essas informações e com a **API de Download XML/DANFE** a ConnectParts consegue emitir a nota de venda para o cliente e então nós comunicaremos o faturamento para a API de vocês que deve ser criada para receber um objeto assim:
 
 ```
 string NumeroNotaFiscal
 string NumeroPedido
 DateTime DataEmissao
 string ChaveNotaFiscal 
-string CodigoRastreio 
+string CodigoRastreio
 ```
 
 A empresa fornecedora deve disponibilizar um FTP, onde será inserida a DANFE da nota fiscal faturada pela Connect Parts. **Essa inserção é feita em um intervalo de 10 minutos**.
@@ -103,12 +100,12 @@ Assim que a mercadoria for despachada, deve ser acionada a API com um POST
 
 **Com um objeto **
 
-
 ```
 {
   "PedidoCodigo": "string",
   "DataDespacho": "2018-03-10T12:16:45.224Z"
 }
 ```
+
 
 
