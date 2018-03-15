@@ -40,7 +40,14 @@ Lista ItensCompra
 
 Após a emissão da nota de compra \(_**para connect**_\) /de venda \(_**para o fornecedor**_\) pelo ERP deve ser comunicado esse faturamento para a nossa API
 
-[http://integra02.connectparts.com.br:8032/dropshipping/PedidoCompra/Inserir](http://integra02.connectparts.com.br:8032/dropshipping/PedidoCompra/Inserir)
+**URL para homologação:**
+
+- [http://integra02.connectparts.com.br:8034/dropshipping/PedidoCompra/Inserir](http://integra02.connectparts.com.br:8034/dropshipping/PedidoCompra/Inserir)
+
+<!--
+Integra02.connectparts.com.br:8032 – redireciona para o servidor 192.168.0.179 (Ambiente de Produção);
+Integra02.connectparts.com.br:8034 – redireciona para o servidor 192.168.0.22 (Ambiente de Homologação)
+-->
 
 Com o **JSon**:
 
@@ -80,7 +87,9 @@ A empresa fornecedora deve disponibilizar um FTP, onde será inserida a DANFE da
 
 Agora a empresa fornecedora é responsável por emitir uma nota fiscal de remessa, e então ao ser transmitida pelo ERP deveremos ser comunicados disso com um post na API
 
-[http://integra02.connectparts.com.br:8032/dropshipping/NotafiscalRemessa/Inserir](http://integra02.connectparts.com.br:8032/dropshipping/NotafiscalRemessa/Inserir)
+**URL de homologação:**
+
+- [http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/Inserir](http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/Inserir)
 
 **Com o objeto:**
 
@@ -96,7 +105,9 @@ Agora a empresa fornecedora é responsável por emitir uma nota fiscal de remess
 
 Assim que a mercadoria for despachada, deve ser acionada a API com um POST
 
-[http://integra02.connectparts.com.br:8032/dropshipping/NotafiscalRemessa/NotificarDespacho](http://integra02.connectparts.com.br:8032/dropshipping/NotafiscalRemessa/NotificarDespacho)
+**URL de homologação:**
+
+[http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/NotificarDespacho](http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/NotificarDespacho)
 
 **Com um objeto **
 
