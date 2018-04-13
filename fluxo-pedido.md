@@ -1,10 +1,10 @@
-# Fluxo Pedido
+# Fluxo pedido
 
 O próximo passo é se preparar para receber um novo pedido de a ConnectParts, para isso deve ser criada uma API para receber um novo pedido.
 
 Segue abaixo objeto que será enviado pela ConnectParts:
 
-```
+```text
 string NomeComprador  //Nome do cliente
 int TipoPessoa   //Tipo de pessoa, 1 para física 2 para jurídica
 string CpfCnpj  
@@ -40,18 +40,13 @@ Lista ItensCompra
 
 Após a emissão da nota de compra \(_**para connect**_\) /de venda \(_**para o fornecedor**_\) pelo ERP deve ser comunicado esse faturamento para a nossa API
 
-**URL para homologação:**
+### **URL Pedido de Compra \(homologação\):**
 
-- [http://integra02.connectparts.com.br:8034/dropshipping/PedidoCompra/Inserir](http://integra02.connectparts.com.br:8034/dropshipping/PedidoCompra/Inserir)
-
-<!--
-Integra02.connectparts.com.br:8032 – redireciona para o servidor 192.168.0.179 (Ambiente de Produção);
-Integra02.connectparts.com.br:8034 – redireciona para o servidor 192.168.0.22 (Ambiente de Homologação)
--->
+* [http://integra02.connectparts.com.br:8034/dropshipping/PedidoCompra/Inserir](http://integra02.connectparts.com.br:8034/dropshipping/PedidoCompra/Inserir)
 
 Com o **JSon**:
 
-```
+```text
 {
   "PedidoFornecedorCodigo": "string",
   "Notafiscal": "string",
@@ -67,15 +62,15 @@ Com o **JSon**:
 }
 ```
 
-**Observação importante:**
+### **Observação importante:**
 
 > Todos os valores praticados pelo ERP da Connect Parts são em inteiro, nesse caso o Json de vocês os números decimais no caso Valor, Quantidade e PrecoUnitario devem ser multiplicados por 100 e então ter seus zeros após a virgula removidos, por exemplo:  
-> Quantidade = 1,00 \* 100 =&gt; Quantidade = 100,00   
+> Quantidade = 1,00 \* 100 =&gt; Quantidade = 100,00  
 > Então devem ser removidos os 00 após a virgula, tornando em 100, um número inteiro.
 
 Com essas informações e com a **API de Download XML/DANFE** a ConnectParts consegue emitir a nota de venda para o cliente e então nós comunicaremos o faturamento para a API de vocês que deve ser criada para receber um objeto assim:
 
-```
+```text
 string NumeroNotaFiscal
 string NumeroPedido
 DateTime DataEmissao
@@ -87,13 +82,13 @@ A empresa fornecedora deve disponibilizar um FTP, onde será inserida a DANFE da
 
 Agora a empresa fornecedora é responsável por emitir uma nota fiscal de remessa, e então ao ser transmitida pelo ERP deveremos ser comunicados disso com um post na API
 
-**URL de homologação:**
+### **URL de Nota Fiscal Remessa Inserir \(homologação\):**
 
-- [http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/Inserir](http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/Inserir)
+* [http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/Inserir](http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/Inserir)
 
 **Com o objeto:**
 
-```
+```text
 {
   "PedidoCodigo": "string",
   "Rastreio": "string",
@@ -105,18 +100,16 @@ Agora a empresa fornecedora é responsável por emitir uma nota fiscal de remess
 
 Assim que a mercadoria for despachada, deve ser acionada a API com um POST
 
-**URL de homologação:**
+### **URL de Nota Fiscal Remessa Despacho \(homologação\):**
 
 [http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/NotificarDespacho](http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/NotificarDespacho)
 
 **Com um objeto **
 
-```
+```text
 {
   "PedidoCodigo": "string",
   "DataDespacho": "2018-03-10T12:16:45.224Z"
 }
 ```
-
-
 

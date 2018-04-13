@@ -1,12 +1,12 @@
 # Pendencia
 
 Em caso de pendencia o fornecedor deve comunicar a API com um POST
- 
+
 [http://integra02.connectparts.com.br:8032/dropshipping/PedidoFornecedorPendencia/Inserir](http://integra02.connectparts.com.br:8032/dropshipping/PedidoFornecedorPendencia/Inserir)
 
 **Com o objeto **
 
-```
+```text
 {
   "PedidoFornecedorCodigo": "string",
   "FabricacaoCodigo": "string",
@@ -16,5 +16,4 @@ Em caso de pendencia o fornecedor deve comunicar a API com um POST
   "DataPrevisao": "string"
 }
 ```
-
 
