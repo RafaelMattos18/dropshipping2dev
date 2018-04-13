@@ -1,4 +1,4 @@
-# Pendencia
+# Pendência
 
 Em caso de pendencia o fornecedor deve comunicar a API com um POST
 
