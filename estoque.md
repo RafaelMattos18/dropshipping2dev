@@ -16,7 +16,7 @@ Nesse endereço deve ser fazer um POST com o seguinte **JSon**:
 }
 ```
 
-## Pontos importantes
+### Pontos importantes
 
 > 1. Apenas um dos campos entre **CodigoFabricao** ou **CodigoProduto** deve ser preenchido. Caso você opte por utilizar o CodigoFabricacao esse é o código do produto no ERP do fornecedor, o outro, CodigoProduto se refere ao código da connectparts.
 > 2. O **FornecedorCodigo** é um Guid único que se refere ao fornecedor, para recupera-lo basta realizar um GET na API: **URL de Homologação:** [http://integra02.connectparts.com.br:8034/dropshipping/Fornecedor/Listar](http://integra02.connectparts.com.br:8034/dropshipping/Fornecedor/Listar)
