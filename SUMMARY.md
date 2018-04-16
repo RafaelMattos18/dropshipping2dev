@@ -1,9 +1,9 @@
 # Summary
 
-* [Introducao](README.md)
-* [Autenticacao](chapter1.md)
+* [Introdução](README.md)
+* [Autenticação](chapter1.md)
 * [Estoque](estoque.md)
 * [Fluxo pedido](fluxo-pedido.md)
 * [Download XML/DANFE](download-xmldanfe.md)
-* [Pendencia](pendencia.md)
+* [Pendência](pendencia.md)
 

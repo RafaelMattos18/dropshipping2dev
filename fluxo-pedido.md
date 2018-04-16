@@ -1,5 +1,7 @@
 # Fluxo Pedido
 
+---
+
 O próximo passo é se preparar para receber um novo pedido de a ConnectParts, para isso deve ser criada uma API para receber um novo pedido.
 
 Segue abaixo objeto que será enviado pela ConnectParts:
@@ -117,6 +119,19 @@ Assim que a mercadoria for despachada, deve ser acionada a API com um POST
   "DataDespacho": "2018-03-10T12:16:45.224Z"
 }
 ```
+
+---
+
+## Recepção passiva de pedido
+
+O cliente Dropshipping irá consultar em nossa API os pedidos que estarão disponíveis para ele. Nesta consulta teremos informações necessárias para o fluxo de pedido
+
+**Observações**
+
+- O tempo de pesquisa nesta API, será definida no lado do cliente
+- O tempo de atualização de nossa API será em 
+- Após a captura detas informações do pedido, o cliente altera o status do mesmo.
+
 
 
 
