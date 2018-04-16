@@ -40,7 +40,7 @@ Lista ItensCompra
 
 Após a emissão da nota de compra \(_**para connect**_\) /de venda \(_**para o fornecedor**_\) pelo ERP deve ser comunicado esse faturamento para a nossa API
 
-### **URL Pedido de Compra \(homologação\):**
+## **URL Pedido de Compra \(homologação\):**
 
 * [http://integra02.connectparts.com.br:8034/dropshipping/PedidoCompra/Inserir](http://integra02.connectparts.com.br:8034/dropshipping/PedidoCompra/Inserir)
 
@@ -62,7 +62,7 @@ Com o **JSon**:
 }
 ```
 
-### **Observação importante:**
+## **Observação importante:**
 
 > Todos os valores praticados pelo ERP da Connect Parts são em inteiro, nesse caso o Json de vocês os números decimais no caso Valor, Quantidade e PrecoUnitario devem ser multiplicados por 100 e então ter seus zeros após a virgula removidos, por exemplo:  
 > Quantidade = 1,00 \* 100 =&gt; Quantidade = 100,00  
@@ -82,7 +82,7 @@ A empresa fornecedora deve disponibilizar um FTP, onde será inserida a DANFE da
 
 Agora a empresa fornecedora é responsável por emitir uma nota fiscal de remessa, e então ao ser transmitida pelo ERP deveremos ser comunicados disso com um post na API
 
-### **URL de Nota Fiscal Remessa Inserir \(homologação\):**
+## **URL de Nota Fiscal Remessa Inserir \(homologação\):**
 
 * [http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/Inserir](http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/Inserir)
 
@@ -100,7 +100,7 @@ Agora a empresa fornecedora é responsável por emitir uma nota fiscal de remess
 
 Assim que a mercadoria for despachada, deve ser acionada a API com um POST
 
-### **URL de Nota Fiscal Remessa Despacho \(homologação\):**
+## **URL de Nota Fiscal Remessa Despacho \(homologação\):**
 
 [http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/NotificarDespacho](http://integra02.connectparts.com.br:8034/dropshipping/NotafiscalRemessa/NotificarDespacho)
 
