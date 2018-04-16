@@ -119,7 +119,7 @@ Assim que a mercadoria for despachada, deve ser acionada a API com um POST
 
 Iremos disponibilizar uma API onde o cliente poderá consultar informações sobre o seu pedido. 
 
-**Observações**
+**Observações:**
 
 - A API da Connectparts será atualizada _real-time_.
 - O tempo de consulta externa do cliente, será determinada pelo mesmo.
