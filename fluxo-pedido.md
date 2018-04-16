@@ -113,3 +113,14 @@ Assim que a mercadoria for despachada, deve ser acionada a API com um POST
 }
 ```
 
+---
+
+## Recepção passiva do pedido
+
+Iremos disponibilizar uma API onde o cliente poderá consultar informações sobre o seu pedido. 
+
+**Observações**
+
+- A API da Connectparts será atualizada _real-time_.
+- O tempo de consulta externa do cliente, será determinada pelo mesmo.
+- Após o consumo das informações sobre o pedido, o cliente terá que alterar o status deste pedido, para retirada deste da listagem.
