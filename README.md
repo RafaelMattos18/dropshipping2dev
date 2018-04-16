@@ -1,4 +1,4 @@
-# Introducao
+# Introdução
 
 O dropshipping é uma técnica de gestão da cadeia logística na qual a CONNECTPARTS não mantém os produtos em estoque. Nesta técnica os produtos ficam disponíveis em todos os canais de venda da ConnectParts \(Loja virtual, Marketplaces e Mercado Livre\) e sempre que uma venda é realizada utilizamos o estoque do parceiro que realiza o envio da mercadoria diretamente do seu CD.
 
