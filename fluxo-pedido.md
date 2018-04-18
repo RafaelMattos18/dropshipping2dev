@@ -119,6 +119,22 @@ Assim que a mercadoria for despachada, deve ser acionada a API com um POST
 
 Iremos disponibilizar uma API onde o cliente poderá consultar informações sobre o seu pedido. 
 
+### Pedido Listar
+
+**URL de listagem de pedido (Homologação)**
+
+- http://api.dakotaparts.com.br:8034/dropshipping/Pedido/Listar?condicoes.statusCodigo=1&condicoes.fornecedorCodigo=CodigoTeste
+
+### Obter Detalhes do Pedido
+
+**URL de obtenção de detalhes de pedidos Hhomologaçaõ)**
+-             http://api.dakotaparts.com.br:8034/dropshipping/Pedido/ObterPedidoDetalhes?pedidoViewModel.fornecedorCodigo=CodigoTeste
+
+### Mudar Status
+
+**URL de mudança de status do pedido (Homologaçaõ)**
+- http://api.dakotaparts.com.br:8034/dropshipping/Pedido/MudarStatusPedido?pedidoViewModel.fornecedorCodigo=CodigoTeste
+
 **Observações:**
 
 - A API da Connectparts será atualizada _real-time_.
