@@ -127,12 +127,12 @@ Iremos disponibilizar uma API onde o cliente poderá consultar informações sob
 
 ### Obter Detalhes do Pedido
 
-**URL de obtenção de detalhes de pedidos Hhomologaçaõ)**
+**URL de obtenção de detalhes de pedidos (Homologação)**
 -             http://api.dakotaparts.com.br:8034/dropshipping/Pedido/ObterPedidoDetalhes?pedidoViewModel.fornecedorCodigo=CodigoTeste
 
 ### Mudar Status
 
-**URL de mudança de status do pedido (Homologaçaõ)**
+**URL de mudança de status do pedido (Homologação)**
 - http://api.dakotaparts.com.br:8034/dropshipping/Pedido/MudarStatusPedido?pedidoViewModel.fornecedorCodigo=CodigoTeste
 
 **Observações:**
